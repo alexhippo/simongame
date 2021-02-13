@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alexandra Hipolito | Simon Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+    <body>
+        <audio id="greenSound" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" preload="auto"></audio>
+        <audio id="redSound" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" preload="auto"></audio>
+        <audio id="yellowSound" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" preload="auto"></audio>
+        <audio id="blueSound" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" preload="auto"></audio>
+        <audio id="wrongSound" src="../simongame/BahBow.mp3" preload="auto"></audio>
+        <audio id="victorySound" src="../simongame/victory.mp3" preload="auto"></audio>
+        <audio id="correctSound" src="../simongame/correct.mp3" preload="auto"></audio>
+        <div id="overlay"></div>
+        <div class="title">
+            Simon
+        </div>
+        
+        <div class="header">
+            <div class="navbartable">
+                <div class="row">
+                    <div class="navbarcell">Strict</div>
+                    <div class="navbarcell">Start</div>
+                    <div class="navbarcell">Count</div>
+                    <div class="navbarcell">Reset</div>
+                    <div class="navbarcell">Help</div>
+                </div>
+                <div class="row">
+                    <div class="dark navbarcell" id="strict"><i class="fa fa-toggle-off" aria-hidden="true" onclick="setStrictMode(true);"></i></div>
+                    <div class="dark navbarcell" id="start"><i class="fa fa-play" aria-hidden="true" onclick="start();"></i></div>
+                    <div id="count" class="navbarcell">0</div>
+                    <div class="dark navbarcell" id="reset"><i class="fa fa-refresh" aria-hidden="true" onclick="reset();"></i></div>
+                    <div class="dark navbarcell" id="help"><i class="fa fa-question" aria-hidden="true" onclick="showInstructions();"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="grid-row">
+                <div id="green" class="dark square" onclick="playerPressColour(this.id)"></div>
+                <div id="red" class="dark square" onclick="playerPressColour(this.id)"></div>
+                <div id="yellow" class="dark square" onclick="playerPressColour(this.id)"></div>
+                <div id="blue" class="dark square" onclick="playerPressColour(this.id)"></div>
+            </div>
+        </div>
+        
+        
+        <div id="correct">
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </div>   
+
+        <div id="wrong">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div> 
+        
+        <div id="win">
+            &#x1F60E;
+        </div>
+
+
+        <div id="howtoplay">
+            <h2>How to play</h2>
+            <p>Remember and copy the sequence of colours and noises I make by pressing on the keys below! If you get it wrong, you will have to copy the sequence again.</p>
+
+            <p>Strict mode is harder - if you get it wrong, the sequence will reset and you will have to start all over from the beginning. Bummer!</p>
+
+            <p>Good luck :)</p>
+
+            <h2>Credits</h2>
+            <p>Design Inspired by <a href="http://labs.uxmonk.com/simon-says/" target="_blank">UX Monk</a></p>
+            <p>Some sound effects from Family Feud, Pokemon and <a href="http://lifehacker.com/5931463/make-your-notifications-less-intrusive-with-these-soothing-alerts" target="_blank">Lifehacker</a></p>
+            <p>Built for <a href="http://freecodecamp.com" target="_blank">Free Code Camp Front End Web Development Course</a></p>
+            <p>Made by <a href="http://alexhippo.github.io" target="_blank">Alexandra Hipolito</a></p>
+            <a href="#" onclick="closeInstructions();">Ok, got it!</a>
+        </div>
+    
+        <script src="../simongame/simongame.js"></script>
+        <link rel="stylesheet" href="../simongame/simongame.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
+    </body>
+</html>

@@ -1,0 +1,280 @@
+/* Global */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: whitesmoke;
+    color: black;
+    padding-left:15px;
+    padding-top: 3px;
+    font-family: 'Chango', sans-serif;
+    font-size: 20px;
+}
+
+/* Header/Navbar */
+.header {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    position: fixed;
+    top: 30px;
+    z-index: 2;
+    background-color: #000;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#heading {
+    padding-left: 10px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#count {
+    font-size: 40px;
+    color: red;
+}
+
+.navbartable{
+    display: table;
+    table-layout: fixed;
+}
+
+.row {
+    display: table-row;
+}
+
+.navbarcell {
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#strict {
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+#reset, #start {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#help {
+    font-size: 42px;
+    cursor: pointer;
+}
+
+/* Instructions */
+#overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    visibility: hidden;
+    z-index:3;
+    background-color: black;
+    opacity: 0.8;
+}
+
+#howtoplay {
+    z-index:4;
+    width: 300px;
+    top: 30%;
+    left: 50%;
+    margin: -140px 0 0 -150px;
+    padding: 5px 2px 5px 2px;
+    background-color: #fff;
+    background-image: linear-gradient(#e7ffff .1em, transparent .1em);
+    background-size: 100% 1.5em;
+    position: fixed;
+    visibility: hidden;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+/* Grid */
+.grid {
+    display: table;
+    table-layout: fixed;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: black;
+}
+
+.grid-row {
+    display: table-row;
+}
+
+.square {
+    display: table-cell;
+    position: relative;
+    text-align: center;
+}
+
+.dark {
+    background-color: black;
+    opacity:0.3;
+}
+
+#green {
+    background-color: #3DD04B;
+}
+
+#red {
+    background-color: #FF3A29;
+}
+
+#yellow {
+    background-color: #FFFF01;
+}
+
+#blue {
+    background-color: #4CC0FB;
+}
+
+#green, #red, #yellow, #blue {
+    cursor: pointer;
+}
+
+
+/* Correct/Wrong/Victory icons */
+#correct, #wrong, #win {
+    font-size: 200px;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#correct {
+    color: greenyellow;
+}
+
+#wrong {
+    color: red;
+    margin: -100px 0 0 -80px;
+}
+
+#win {
+    color: black;
+}
+
+
+@-webkit-keyframes bounceOutAndUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+ }
+
+@-moz-keyframes bounceOutAndUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+ }
+
+
+@-o-keyframes bounceOutAndUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+ }
+
+@-ms-keyframes bounceOutAndUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+ }
+
+
+@keyframes bounceOutAndUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+ }
+
+.bounceOutAndUp {
+    animation: bounceOutAndUp 1.5s;
+    -webkit-animation: bounceOutAndUp 1.5s;
+    -moz-animation: bounceOutAndUp 1.5s;
+    -o-animation: bounceOutAndUp 1.5s;
+    -ms-transition: bounceOutAndUp 1.5s;
+}
