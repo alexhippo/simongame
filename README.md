@@ -7,4 +7,5 @@ This project was built as part of [freeCodeCamp's Legacy Front End Web Developme
 **See this project live**
 
 https://alexhippo.github.io/projects/simongame/
+
 ---
